@@ -30,7 +30,6 @@ module axil_slave # (parameter AW=8)
     // "Write Data"                         -- Master --    -- Slave --
     input[31:0]                             S_AXI_WDATA,      
     input                                   S_AXI_WVALID,
-    input[3:0]                              S_AXI_WSTRB,
     output                                                  S_AXI_WREADY,
 
     // "Send Write Response"                -- Master --    -- Slave --
@@ -186,7 +185,6 @@ axi4_lite_slave#(ADDR_MASK) i_axi4lite_slave
     // AXI W channel
     .AXI_WDATA      (S_AXI_WDATA),
     .AXI_WVALID     (S_AXI_WVALID),
-    .AXI_WSTRB      (S_AXI_WSTRB),
     .AXI_WREADY     (S_AXI_WREADY),
 
     // AXI B channel

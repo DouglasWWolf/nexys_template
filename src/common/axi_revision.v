@@ -52,7 +52,6 @@ module axi_revision#
     // "Write Data"                         -- Master --    -- Slave --
     input  wire [S_AXI_DATA_WIDTH-1 : 0]    S_AXI_WDATA,      
     input  wire                             S_AXI_WVALID,
-    input  wire [(S_AXI_DATA_WIDTH/8)-1:0]  S_AXI_WSTRB,
     output wire                                             S_AXI_WREADY,
 
     // "Send Write Response"                -- Master --    -- Slave --
