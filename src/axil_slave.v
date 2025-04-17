@@ -28,7 +28,8 @@ module axil_slave # (parameter AW=8)
     input[2:0]                              S_AXI_AWPROT,
 
     // "Write Data"                         -- Master --    -- Slave --
-    input[31:0]                             S_AXI_WDATA,      
+    input[31:0]                             S_AXI_WDATA, 
+    input[ 3:0]                             S_AXI_WSTRB,     
     input                                   S_AXI_WVALID,
     output                                                  S_AXI_WREADY,
 

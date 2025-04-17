@@ -400,7 +400,7 @@
           },
           "HAS_WSTRB": {
             "value": "1",
-            "value_src": "default_prop"
+            "value_src": "default"
           },
           "ID_WIDTH": {
             "value": "0",

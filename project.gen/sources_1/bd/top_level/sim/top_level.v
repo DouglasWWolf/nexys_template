@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (lin64) Build 3247384 Thu Jun 10 19:36:07 MDT 2021
-//Date        : Wed Apr 16 17:07:37 2025
+//Date        : Wed Apr 16 17:46:03 2025
 //Host        : simtool-5 running 64-bit Ubuntu 20.04.6 LTS
 //Command     : generate_target top_level.bd
 //Design      : top_level
@@ -92,6 +92,7 @@ module top_level
   wire system_interconnect_M01_AXI_RVALID;
   wire system_interconnect_M01_AXI_WDATA;
   wire system_interconnect_M01_AXI_WREADY;
+  wire system_interconnect_M01_AXI_WSTRB;
   wire [0:0]system_interconnect_M01_AXI_WVALID;
   wire uart_axi_bridge_M_AXI_ARADDR;
   wire [0:0]uart_axi_bridge_M_AXI_ARREADY;
@@ -154,6 +155,7 @@ module top_level
         .S_AXI_RVALID(system_interconnect_M01_AXI_RVALID),
         .S_AXI_WDATA({system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA,system_interconnect_M01_AXI_WDATA}),
         .S_AXI_WREADY(system_interconnect_M01_AXI_WREADY),
+        .S_AXI_WSTRB({system_interconnect_M01_AXI_WSTRB,system_interconnect_M01_AXI_WSTRB,system_interconnect_M01_AXI_WSTRB,system_interconnect_M01_AXI_WSTRB}),
         .S_AXI_WVALID(system_interconnect_M01_AXI_WVALID),
         .clk(source_100mhz_sys_clk),
         .resetn(source_100mhz_sys_resetn));
@@ -208,6 +210,7 @@ module top_level
         .M01_AXI_rvalid(system_interconnect_M01_AXI_RVALID),
         .M01_AXI_wdata(system_interconnect_M01_AXI_WDATA),
         .M01_AXI_wready(system_interconnect_M01_AXI_WREADY),
+        .M01_AXI_wstrb(system_interconnect_M01_AXI_WSTRB),
         .M01_AXI_wvalid(system_interconnect_M01_AXI_WVALID),
         .S00_AXI_araddr(uart_axi_bridge_M_AXI_ARADDR),
         .S00_AXI_arburst({1'b0,1'b1}),
